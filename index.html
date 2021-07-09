@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carte de visite</title>
+    <style>
+        body{
+            background-color:rgb(221, 221, 221);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .content{
+            position: relative;
+            margin: auto;
+            width: 350px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 10px;
+            border:1px solid grey;
+        }
+        #fond{
+            position: absolute;
+            z-index: -2;
+        }
+        #contenue{
+            position: absolute;
+            z-index: -1;
+        }
+        #name{
+            color: rgb(94, 3, 241);
+            text-align: left;
+            position: relative;
+            left: 70px;
+            margin-bottom: 0px;
+        }
+        #act{
+            color: rgb(101, 211, 68);
+            text-align: left;
+            position: relative;
+            left: 70px;
+            margin-top: 0px;
+            font-size: 12px;
+        }
+        .info{
+            color: rgb(69, 80, 129);
+            text-align: left;
+            position: relative;
+            left: 150px;
+            margin: 0;
+            color: rgb(11, 73, 243);
+        }
+        .tex{
+            position: relative;
+            bottom: 5px;
+        }
+        #in{
+            margin-left:25px;
+        }
+        #in img{
+            margin-right: 5px;
+        }
+        #im{
+            margin-left:-10px;
+        }
+        #im img{
+            margin-right: 6px;
+        }
+        #il{
+            margin-left:-33px;
+            margin-top: 30px;
+        }
+        #il img{
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div id="fond">
+            <canvas id="can" height="200" width="350"></canvas>
+        </div>
+        <div id="contenue">
+            <h5 id="name">RANDRIANARIVELO Herinantenaina Joël</h3>
+            <p id="act">Developpeur</p>
+            <h6 class="info" id="il">
+                <img src="png-transparent-location-application-icon-computer-software-business-information-organization-location-logo-miscellaneous-blue-company.png" alt="" height="17">
+                <span class="tex">Lot VV 197 H Manakambahiny</span>
+            </h6>
+            <h6 class="info" id="im">
+                <img src="iphone-telephone-logo-computer-icons-red-call-icon-11553520215xtqxhnnj6r.png" alt="" height="17">
+                <span class="tex">034 60 773 68</span>
+            </h6>
+            <h6 class="info">
+                <img src="Facebook-logo.png" alt="" height="17">
+                <span class="tex">Joel Nantenaina</span>
+            </h6>
+            <h6 class="info" id="in">
+                <img src="logo-do-gmail-png-8-Transparent-Images.png" alt="" height="17">
+                <span class="tex">joelran.jr@gmail.com</span>
+            </h6>
+            
+        </div>
+        
+    </div>
+    <script>
+        let c=document.querySelector('#can');
+        let ctx=c.getContext('2d');
+
+        ctx.beginPath();
+        ctx.fillStyle = "white";
+        ctx.moveTo(0,0);
+        ctx.rect(0, 0, 350, 200);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#1a75ff";
+        ctx.moveTo(0,0);
+        ctx.lineTo(0,200);
+        ctx.lineTo(500,500);
+        ctx.fill();
+
+        ctx.beginPath();
+        ctx.fillStyle = "#003380";
+        ctx.moveTo(0,10);
+        ctx.lineTo(0,200);
+        ctx.lineTo(490,500);
+        ctx.fill();
+
+    </script>
+</body>
+</html>
